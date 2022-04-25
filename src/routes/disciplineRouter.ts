@@ -1,12 +1,9 @@
 import { Router } from "express";
-import { ValidateToken } from "../middlewares/validateTokenMiddleware.js";
+import {ensureAuthenticatedMiddleware} from "../middlewares/ensureAuthenticatedMiddleware.js"
 import * as disciplineController from "../controllers/disciplineController.js"
 
 const disciplineRouter: Router = Router();
-
-disciplineRouter.use(ValidateToken)
-
-disciplineRouter.get("/", disciplineController.getAllDisciplines)
+disciplineRouter.get("/discipline",ensureAuthenticatedMiddleware, disciplineController.getAllDisciplines)
 
 
 export default disciplineRouter

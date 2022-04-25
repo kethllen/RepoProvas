@@ -3,7 +3,7 @@ import {ensureAuthenticatedMiddleware} from "../middlewares/ensureAuthenticatedM
 import * as termController from "../controllers/termController.js"
 
 const termRouter: Router = Router();
-termRouter.get("/", ensureAuthenticatedMiddleware, termController.getAllTerms)
+termRouter.get("/term", ensureAuthenticatedMiddleware, termController.getAllTerms)
 
 
 export default termRouter

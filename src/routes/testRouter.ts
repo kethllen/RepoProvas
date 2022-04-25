@@ -3,7 +3,7 @@ import {ensureAuthenticatedMiddleware} from "../middlewares/ensureAuthenticatedM
 import * as testController from "../controllers/testController.js"
 
 const testRouter: Router = Router();
-testRouter.get("/",ensureAuthenticatedMiddleware, testController.getAllTests)
+testRouter.get("/test",ensureAuthenticatedMiddleware, testController.getAllTests)
 
 
 export default testRouter

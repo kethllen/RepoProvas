@@ -3,7 +3,7 @@ import {ensureAuthenticatedMiddleware} from "../middlewares/ensureAuthenticatedM
 import * as categoryController from "../controllers/categoryController.js"
 
 const categoryRouter: Router = Router();
-categoryRouter.get("/",ensureAuthenticatedMiddleware, categoryController.getAllCategories)
+categoryRouter.get("/category",ensureAuthenticatedMiddleware, categoryController.getAllCategories)
 
 
 export default categoryRouter
