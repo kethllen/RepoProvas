@@ -52,7 +52,8 @@ CREATE TABLE "teacherDisciplines" (
 -- CreateTable
 CREATE TABLE "tests" (
     "id" SERIAL NOT NULL,
-    "answer" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "pdfUrl" TEXT NOT NULL,
     "categoryId" INTEGER NOT NULL,
     "teacherDisciplineId" INTEGER NOT NULL,
 

@@ -65,7 +65,8 @@ model TeacherDiscipline {
 
 model Test {
   id                  Int               @id @default(autoincrement())
-  answer              String
+  name                String
+  pdfUrl              String
   category            Category          @relation(fields: [categoryId], references: [id])
   categoryId          Int
   teacherDiscipline   TeacherDiscipline @relation(fields: [teacherDisciplineId], references: [id])
